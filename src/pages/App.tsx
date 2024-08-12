@@ -1,14 +1,23 @@
-import { NavLink } from "react-router-dom";
 import Header from "../components/Header";
+import memoryIndex from '../assets/init/memoryIndex.webp'
+import qaIndex from '../assets/init/qaIndex.webp'
+import puzzleIndex from '../assets/init/puzzleIndex.webp'
+import { NavLink } from "react-router-dom";
 export default function App() {
   return (
     <>
       <Header />
-      <section className="w-11/12 h-[400px] bg-cyan-500 m-auto mt-10">
-        <div className="w-64 h-full border">
-        <NavLink to="/memorygame">Jugar</NavLink>
-        </div>
-      </section>
+      <div className="w-4/5 h-auto m-auto mt-10 flex justify-center flex-wrap gap-10">
+        <NavLink to="/memorygame-rules" className="w-[35%] relative rounded-md border bg-cover" style={{ fontFamily: "gambado-sans", }}>
+          <img src={memoryIndex} alt="" />
+        </NavLink>
+        <NavLink to="/qagame-rules" className="w-[35%] relative rounded-md border bg-cover" style={{ fontFamily: "gambado-sans", }}>
+          <img src={qaIndex} alt="" />
+        </NavLink >
+        <NavLink to="puzzlegame-rules" className="w-[35%] relative rounded-md border bg-cover" style={{ fontFamily: "gambado-sans", }}>
+          <img src={puzzleIndex} alt="" />
+        </NavLink>
+      </div>
     </>
   )
 }
