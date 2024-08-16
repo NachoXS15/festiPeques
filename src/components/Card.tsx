@@ -3,11 +3,14 @@ import dorso from '../assets/cards/dorso.webp'
 import ReactCardFlip from 'react-card-flip'
 import CardProps from '../config/CardProps'
 
-export default function Card({img}: CardProps) {
+export default function Card({cardName, checkCard, img, index}: CardProps) {
     const [isFlipped, setIsFlipped] = useState(false)
 
     const handleClick = () => {
-        setIsFlipped(!isFlipped)
+        const value = checkCard(cardName, index)
+        if (value != 0) {
+            setIsFlipped(!isFlipped)
+        }
     }
   return (
     <>

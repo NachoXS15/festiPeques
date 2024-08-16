@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import cards from '../../config/Cards'
-import dorso from 'dorso.webp'
 import Card from '../../components/Card';
 import CardProps from '../../config/CardProps';
 
 export default function MemoryPlay() {
   const [cardsA, setCardsA] = useState<CardProps[]>([])
-  const [score, setScore] = useState(0)
-  const [timeLeft, setTimeLeft] = useState(120)
-  const [isFinished, setIsFinished] = useState(false);
+  const [firstCard, setFirstCard] = useState<CardProps>()
+  const [SecondCard, setSecondCard] = useState<CardProps>()
 
-  const navigate = useNavigate();
+  const [disabledCards, setDisabledCards] = useState([])
+  const [unFlippedCards, setUnFlippedCards] = useState([])
+  // const [score, setScore] = useState(0)
+  // const [timeLeft, setTimeLeft] = useState(120)
+  // const [isFinished, setIsFinished] = useState(false);
 
-  const closeModal = () => {
-    navigate('/memorygame-rules')
-  }
+  // const navigate = useNavigate();
+
+  // const closeModal = () => {
+  //   navigate('/memorygame-rules')
+  // }
 
   const shuffleCards = (array) => {
       for (let i = array.length - 1; i > 0; i--) {
@@ -25,6 +29,41 @@ export default function MemoryPlay() {
         array[j] = temp
       }
   }
+
+  const flipCards = (nombre, index) => {
+    if (firstCard?.cardName === nombre && firstCard?.index === index ) {
+      return 0;
+    }
+    if (!firstCard?.cardName) {
+      setFirstCard({nombre, index})
+    }
+    else if(!SecondCard?.cardName){
+      setSecondCard({nombre, index})
+    }
+    return 1;
+  }
+
+  const checkCards = () => {
+    if (firstCard?.cardName && SecondCard?.cardName) {
+      const match = firstCard.cardName === SecondCard.cardName;
+      match ? disableCards() : unFlipCards()
+    }
+  }
+
+  const disableCards = () => {
+    setDisabledCards([firstCard?.index, SecondCard?.index])
+    resetCards()
+  };
+
+  const unFlipCards = () => {
+    setUnFlippedCards([firstCard?.index, SecondCard?.index])
+    resetCards()
+  };
+
+  const resetCards = () => {
+    setFirstCard(null)
+    setSecondCard(null)
+  };
 
   useEffect(() => {
     // const interval = setInterval((prev) => {
@@ -43,14 +82,14 @@ export default function MemoryPlay() {
         <div className='w-3/5 h-3/5 flex flex-wrap items-center justify-center'>
           {
             cardsA.map((card, index) => (
-              <Card cardName={card.cardName} index={index} img={card.img}/>
+              <Card cardName={card.cardName} index={index} img={card.img} flipCards={flipCards(card.cardName, card.index)}/>
             ))
           }
         </div>
-        <div className='w-full flex justify-around'>
+        {/* <div className='w-full flex justify-around'>
           <h2 className='text-3xl pb-10 pr-10'>Tiempo restante: s</h2>
           <h2 className='text-3xl pb-10 pr-10'>Puntuacion: {score}/10</h2>
-        </div>
+        </div> */}
       </div>
     </>
   )
