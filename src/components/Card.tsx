@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import dorso from '/assets/cards/dorso.webp'
+import dorso from '../../public/assets/cards1/dorso.webp'
 import ReactCardFlip from 'react-card-flip';
 import CardProps from '../config/CardProps';
 
@@ -31,7 +31,7 @@ export default function Card({ cardName, flipCards, img, index, unFlippedCards, 
   return (
     <ReactCardFlip isFlipped={isFlipped}>
       <img src={dorso} width={107} className="m-1" alt="" onClick={handleClick} />
-      <img src={`/assets/cards/${img}`} width={107} className="m-1" alt="" onClick={handleClick} />
+      <img src={`/assets/cards2/${img}`} width={107} className="m-1" alt="" onClick={handleClick} />
     </ReactCardFlip>
   );
 }

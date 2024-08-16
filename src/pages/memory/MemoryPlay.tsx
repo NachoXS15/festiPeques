@@ -10,7 +10,7 @@ export default function MemoryPlay() {
   const [SecondCard, setSecondCard] = useState<CardProps | null>(null);
   const [disabledCards, setDisabledCards] = useState<number[]>([]);
   const [unFlippedCards, setUnFlippedCards] = useState<number[]>([]);
-  // const [score, setScore] = useState(second)
+  const [score, setScore] = useState(0)
   // const [score, setScore] = useState(0)
   // const [timeLeft, setTimeLeft] = useState(120)
   // const [isFinished, setIsFinished] = useState(false);
@@ -45,6 +45,10 @@ export default function MemoryPlay() {
     if (firstCard && SecondCard) {
       const match = firstCard.cardName === SecondCard.cardName;
       match ? disableCards() : unFlipCards();
+      if (match) {
+        setScore(score + 1)
+        
+      }
     }
   };
 
@@ -98,7 +102,7 @@ export default function MemoryPlay() {
         </div>
         <div className='w-full flex justify-around'>
           <h2 className='text-3xl pb-10 pr-10'>Tiempo restante: s</h2>
-          <h2 className='text-3xl pb-10 pr-10'>Puntuacion: 0/10</h2>
+          <h2 className='text-3xl pb-10 pr-10'>Puntuacion: {score}/10</h2>
         </div>
       </div>
     </>
