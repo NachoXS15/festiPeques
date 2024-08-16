@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import cards from '../../config/Cards'
-
 import dorso from '../../assets/cards/dorso.webp'
+
 export default function MemoryPlay() {
   const [score, setScore] = useState(0)
   const [timeLeft, setTimeLeft] = useState(120)
