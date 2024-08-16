@@ -11,8 +11,7 @@ export default function MemoryPlay() {
   const [disabledCards, setDisabledCards] = useState<number[]>([]);
   const [unFlippedCards, setUnFlippedCards] = useState<number[]>([]);
   const [score, setScore] = useState(0)
-  // const [score, setScore] = useState(0)
-  // const [timeLeft, setTimeLeft] = useState(120)
+  const [timeLeft, setTimeLeft] = useState(120)
   // const [isFinished, setIsFinished] = useState(false);
 
   // const navigate = useNavigate();
@@ -47,7 +46,6 @@ export default function MemoryPlay() {
       match ? disableCards() : unFlipCards();
       if (match) {
         setScore(score + 1)
-        
       }
     }
   };
@@ -82,6 +80,17 @@ export default function MemoryPlay() {
     }
   }, [SecondCard]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(timeLeft - 1)
+    }, 1000)
+
+    if (timeLeft == 0) {
+      clearTimeout(timer)
+    }
+    
+  }, [timeLeft]);
+
 
   return (
     <>
@@ -101,7 +110,7 @@ export default function MemoryPlay() {
           ))}
         </div>
         <div className='w-full flex justify-around'>
-          <h2 className='text-3xl pb-10 pr-10'>Tiempo restante: s</h2>
+          <h2 className='text-3xl pb-10 pr-10'>Tiempo restante: <span className={`${timeLeft < 30 ? "text-red-600" :  "text-white"}`}>{timeLeft}</span>s</h2>
           <h2 className='text-3xl pb-10 pr-10'>Puntuacion: {score}/10</h2>
         </div>
       </div>
