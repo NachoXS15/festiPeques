@@ -7,14 +7,14 @@ export default function App() {
   return (
     <>
       <Header />
-      <div className="w-4/5 h-auto m-auto mt-12 mb-2 flex justify-center flex-wrap gap-16">
-        <NavLink to="/memorygame-rules" className="active:scale-105 transition w-[35%] relative rounded-md border bg-cover" style={{ fontFamily: "gambado-sans", }}>
+      <div className="w-4/5 h-auto m-auto mt-12 flex justify-center flex-wrap gap-16">
+        <NavLink to="/memorygame-rules" className="active:scale-105 transition w-[35%] relative rounded-md bg-cover" style={{ fontFamily: "gambado-sans", }}>
           <img src={memoryIndex} alt="" />
         </NavLink>
-        <NavLink to="/qagame-rules" className="active:scale-105 transition w-[35%] relative rounded-md border bg-cover" style={{ fontFamily: "gambado-sans", }}>
+        <NavLink to="/qagame-rules" className="active:scale-105 transition w-[35%] relative rounded-md bg-cover" style={{ fontFamily: "gambado-sans", }}>
           <img src={qaIndex} alt="" />
         </NavLink >
-        <NavLink to="puzzlegame-rules" className="active:scale-105 transition w-[35%] relative rounded-md border bg-cover" style={{ fontFamily: "gambado-sans", }}>
+        <NavLink to="puzzlegame-rules" className="active:scale-105 transition w-[35%] relative rounded-md bg-cover" style={{ fontFamily: "gambado-sans", }}>
           <img src={puzzleIndex} alt="" />
         </NavLink>
       </div>
