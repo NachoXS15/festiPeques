@@ -1,4 +1,4 @@
-import WinPhrases from '../../config/WinPhrasesMemory';
+import WinPhrases from '../../config/WinPhrasesQA';
 
 export default function getPhrase(score: number): { title: string; desc: string } {
     let scoreBlockAsign: string;
@@ -9,7 +9,7 @@ export default function getPhrase(score: number): { title: string; desc: string 
     } else {
         scoreBlockAsign = 'high';
     }
-
+    
     const filteredPhrases = WinPhrases.filter(phrase => phrase.score === scoreBlockAsign);
     const randomPhrase = filteredPhrases[Math.floor(Math.random() * filteredPhrases.length)];
 

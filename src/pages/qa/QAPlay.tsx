@@ -37,8 +37,9 @@ export default function QAPlay() {
 
     const handleAnswer = (isCorrect: boolean, e: React.MouseEvent<HTMLButtonElement> | null) => {
         if (isFinished) return;
+        const updatedScore = isCorrect ? score + 1 : score;
 
-        if (isCorrect) setScore(score + 1);
+        if (isCorrect) setScore(updatedScore);
         if (e) {
             const target = e.target as HTMLButtonElement | null;
             if (target) {
@@ -62,7 +63,7 @@ export default function QAPlay() {
             ]);
         }
         if (currentQuestion === qaBlock.length - 1) {
-            const finalPhrase = getPhrase(score);
+            const finalPhrase = getPhrase(updatedScore);
             setPhrase(finalPhrase);
             setIsFinished(true);
             setIsOpenGo(true);
@@ -118,6 +119,10 @@ export default function QAPlay() {
                             <h2 className='text-5xl'>{phrase.title}</h2>
                             <h2 className='w-4/5 text-3xl'>{phrase.desc}</h2>
                         </div>
+                        <div className='mt-10'>
+                            <h2 className='text-5xl'>Acertaste:</h2>
+                            <h2 className='text-4xl'><span className='text-green-600'>{score} </span>de 5 preguntas</h2>
+                        </div>
                         <button
                             onClick={() => closeModalGo()}
                             className='text-4xl mt-14 bg-purple px-3 py-4 rounded-full active:scale-105 transition'
@@ -130,17 +135,17 @@ export default function QAPlay() {
             </>}
             {isFinished && showAnswers && <>
                 <div
-                    className="w-5/6 h-[700px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
+                    className="w-5/6 h-[750px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
                     style={{ backgroundImage: `url(${bgAnswers})`, fontFamily: 'gambado-sans' }}
                 >
-                    <div className="w-full h-[600px] my-10 gap-5 bg-cover bg-center flex flex-col items-center justify-center px-5 text-white">
+                    <div className="w-full h-[600px] my-16 gap-5 bg-cover bg-center flex flex-col items-center justify-center text-white">
                         {/*content*/}
                         <h1 className='text-5xl'>Verificá tus respuestas</h1>
-                        <section className='w-full flex flex-wrap items-center justify-center gap-5'>
+                        <section className='w-full flex flex-wrap items-center justify-center gap-2'>
                             {optionsPicked.map((picked, index) => (
                                 <div key={index} className='w-1/3'>
                                     <p className='text-xl'><strong><span className='text-2xl'>Pregunta: </span></strong><br />{picked.question}</p>
-                                    <p className='text-md'><strong><span>Respuesta Elegida: </span></strong>{picked.answer} - <span className={picked.isCorrect ? 'bg-green-600 text-2xl' : 'bg-red-600 text-2xl'}>({picked.answer === "" ? 'No respondió' : picked.isCorrect ? 'Correcto' : 'Incorrecto'})</span></p>
+                                    <p className='text-xl'><strong><span>Respuesta Elegida: </span></strong>{picked.answer} - <span className={picked.isCorrect ? 'bg-green-600 text-xl' : 'bg-red-600 text-xl'}>({picked.answer === "" ? 'No respondió' : picked.isCorrect ? 'Correcto' : 'Incorrecto'})</span></p>
                                 </div>
                             ))}
                         </section>
