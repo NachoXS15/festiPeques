@@ -1,201 +1,333 @@
 const Questions = [
     {
         id: "1",
-        question: "¿Cuál es el término para una narración corta que generalmente contiene una lección moral?",
+        question: "¿Cuál es el nombre del personaje principal en 'Peppa Pig'?",
         answers: [
-            {answer: "Ensayo", isCorrect: false},
-            {answer: "Fábula", isCorrect: true},
-            {answer: "Épica", isCorrect: false},
-            {answer: "Novela", isCorrect: false}
+            { answer: "George", isCorrect: false },
+            { answer: "Suzy", isCorrect: false },
+            { answer: "Peppa", isCorrect: true },
+            { answer: "Pedro", isCorrect: false }
         ],
         block: 1
     },
     {
         id: "2",
-        question: "¿Quién es el autor de la novela 'Cien años de soledad'?",
+        question: "¿Qué animal es conocido por tener la lengua más larga del reino animal?",
         answers: [
-            {answer: "Pablo Neruda", isCorrect: false},
-            {answer: "Mario Vargas Llosa", isCorrect: false},
-            {answer: "Gabriel García Márquez", isCorrect: true},
-            {answer: "Jorge Luis Borges", isCorrect: false}
+            { answer: "León", isCorrect: false },
+            { answer: "Elefante", isCorrect: false },
+            { answer: "Jirafa", isCorrect: false },
+            { answer: "Camaleón", isCorrect: true }
         ],
         block: 1
     },
     {
         id: "3",
-        question: "¿Qué es una 'paradoja'?",
+        question: "¿Cuál es el apodo de la selección argentina de fútbol?",
         answers: [
-            {answer: "Una exageración extrema", isCorrect: false},
-            {answer: "Una combinación de palabras opuestas", isCorrect: false},
-            {answer: "Una afirmación que parece contradecirse pero puede ser verdad", isCorrect: true},
-            {answer: "Una repetición de sonidos consonantes", isCorrect: false}
+            { answer: "La Celeste", isCorrect: false },
+            { answer: "Los Pumas", isCorrect: false },
+            { answer: "La Albiceleste", isCorrect: true },
+            { answer: "Los Cóndores", isCorrect: false }
         ],
         block: 1
     },
     {
         id: "4",
-        question: "¿Qué famosa frase pronuncia Hamlet en su soliloquio más conocido?",
+        question: "¿En qué ciudad de Argentina se encuentra el famoso Obelisco?",
         answers: [
-            {answer: "Ser o no ser, esa es la cuestión", isCorrect: true},
-            {answer: "Un caballo, un caballo, mi reino por un caballo", isCorrect: false},
-            {answer: "La vida es un sueño", isCorrect: false},
-            {answer: "Algo huele a podrido en Dinamarca", isCorrect: false}
+            { answer: "Córdoba", isCorrect: false },
+            { answer: "Mendoza", isCorrect: false },
+            { answer: "Buenos Aires", isCorrect: true },
+            { answer: "Rosario", isCorrect: false }
         ],
         block: 1
     },
     {
         id: "5",
-        question: "¿Cuál es el principal enemigo de Martín Fierro en la historia?",
+        question: "¿Cuál es el nombre del amigo de Mickey Mouse que es un perro?",
         answers: [
-            {answer: "El ejército", isCorrect: true},
-            {answer: "Los indios", isCorrect: false},
-            {answer: "Los jueces", isCorrect: false},
-            {answer: "Los gauchos rivales", isCorrect: false}
+            { answer: "Pluto", isCorrect: true },
+            { answer: "Goofy", isCorrect: false },
+            { answer: "Donald", isCorrect: false },
+            { answer: "Clarabell", isCorrect: false }
         ],
         block: 1
     },
     {
         id: "6",
-        question: "En el libro 'El Fantasma de Canterville' ¿Qué objeto sigue apareciendo manchado de sangre en la mansión?",
+        question: "¿Cuál es el nombre del personaje principal en el videojuego 'Super Mario'?",
         answers: [
-            {answer: "Una estatua", isCorrect: false},
-            {answer: "Un espejo", isCorrect: false},
-            {answer: "Un cuadro", isCorrect: false},
-            {answer: "Una alfombra", isCorrect: true}
+            { answer: "Luigi", isCorrect: false },
+            { answer: "Bowser", isCorrect: false },
+            { answer: "Mario", isCorrect: true },
+            { answer: "Wario", isCorrect: false }
         ],
-        block: 1
+        block: 2
     },
     {
         id: "7",
-        question: "¿En qué año se publicó 'Don Quijote de la Mancha' de Miguel de Cervantes?",
+        question: "¿Cuál es el nombre del perro inteligente y de gran tamaño en la serie animada 'Paw Patrol'?",
         answers: [
-            {answer: "1492", isCorrect: false},
-            {answer: "1605", isCorrect: true},
-            {answer: "1776", isCorrect: false},
-            {answer: "1815", isCorrect: false}
+            { answer: "Marshall", isCorrect: false },
+            { answer: "Rubble", isCorrect: false },
+            { answer: "Chase", isCorrect: true },
+            { answer: "Rocky", isCorrect: false }
         ],
         block: 2
     },
     {
         id: "8",
-        question: "¿Qué recurso literario se utiliza cuando el autor interrumpe la narración para dirigirse directamente al lector?",
+        question: "¿Cómo se llama el ratón protagonista de la película 'Ratatouille' que sueña con convertirse en chef?",
         answers: [
-            {answer: "Flashback", isCorrect: false},
-            {answer: "Apóstrofe", isCorrect: true},
-            {answer: "Sátira", isCorrect: false},
-            {answer: "Epíteto", isCorrect: false}
+            { answer: "Linguini", isCorrect: false },
+            { answer: "Remy", isCorrect: true },
+            { answer: "Emile", isCorrect: false },
+            { answer: "Anton", isCorrect: false }
         ],
         block: 2
     },
     {
         id: "9",
-        question: "¿Cómo se llama el protagonista principal de 'Los Miserables'?",
+        question: "¿Qué emoción es la líder del grupo en la película 'Intensamente'?",
         answers: [
-            {answer: "Cosette", isCorrect: false},
-            {answer: "Marius Pontmercy", isCorrect: false},
-            {answer: "Jean Valjean", isCorrect: true},
-            {answer: "Javert", isCorrect: false}
+            { answer: "Tristeza", isCorrect: false },
+            { answer: "Ira", isCorrect: false },
+            { answer: "Miedo", isCorrect: false },
+            { answer: "Alegría", isCorrect: true }
         ],
         block: 2
     },
     {
         id: "10",
-        question: "¿Qué satiriza Swift en 'Los viajes de Gulliver'?",
+        question: "¿Cuáles son los nombres de las emociones principales en la película 'Intensamente'?",
         answers: [
-            {answer: "La religión", isCorrect: false},
-            {answer: "La política y la sociedad de su tiempo", isCorrect: true},
-            {answer: "La ciencia ficción", isCorrect: false},
-            {answer: "El romanticismo", isCorrect: false}
+            { answer: "Alegría, Tristeza, Ira, Miedo, Desagrado", isCorrect: true },
+            { answer: "Felicidad, Enojo, Ansiedad, Sorpresa, Aburrimiento", isCorrect: false },
+            { answer: "Alegría, Desesperación, Envidia, Miedo, Nostalgia", isCorrect: false },
+            { answer: "Felicidad, Ira, Miedo, Vergüenza, Desagrado", isCorrect: false }
         ],
         block: 2
     },
     {
         id: "11",
-        question: "En el Libro 'De la tierra a la luna' de Julio Verne, ¿Quién es el presidente del Gun Club que propone la misión a la luna?",
+        question: "¿Cuál es el nombre real de Spider-Man?",
         answers: [
-            {answer: "Michel Ardan", isCorrect: false},
-            {answer: "Captain Nemo", isCorrect: false},
-            {answer: "Phileas Fogg", isCorrect: false},
-            {answer: "Impey Barbicane", isCorrect: true}
+            { answer: "Peter Parker", isCorrect: true },
+            { answer: "Bruce Wayne", isCorrect: false },
+            { answer: "Clark Kent", isCorrect: false },
+            { answer: "Tony Stark", isCorrect: false }
         ],
-        block: 2
+        block: 3
     },
     {
         id: "12",
-        question: "¿Qué es un 'narrador omnisciente'?",
+        question: "¿Qué tipo de animal muerde a Peter Parker y le da sus poderes de Spider-Man?",
         answers: [
-            {answer: "Un narrador que participa activamente en la historia", isCorrect: false},
-            {answer: "Un narrador que sabe todo lo que piensan y sienten los personajes", isCorrect: true},
-            {answer: "Un narrador que solo conoce lo que el protagonista sabe", isCorrect: false},
-            {answer: "Un narrador que habla directamente al lector", isCorrect: false}
+            { answer: "Una araña", isCorrect: true },
+            { answer: "Un ratón", isCorrect: false },
+            { answer: "Un perro", isCorrect: false },
+            { answer: "Un pájaro", isCorrect: false }
         ],
-        block: 2
+        block: 3
     },
     {
         id: "13",
-        question: "¿Qué género literario se caracteriza por relatar eventos que ocurren en un mundo imaginario con elementos mágicos?",
+        question: "¿Cuál es el nombre del protagonista de la película 'Coco'?",
         answers: [
-            {answer: "Realismo mágico", isCorrect: false},
-            {answer: "Fantasía", isCorrect: true},
-            {answer: "Ciencia ficción", isCorrect: false},
-            {answer: "Novela histórica", isCorrect: false}
+            { answer: "Miguel", isCorrect: true },
+            { answer: "Hector", isCorrect: false },
+            { answer: "Ernesto", isCorrect: false },
+            { answer: "Julio", isCorrect: false }
         ],
         block: 3
     },
     {
         id: "14",
-        question: "¿Qué es un 'protagonista'?",
+        question: "¿Cómo se llaman los tres protagonistas de la serie 'Escandalosos'?",
         answers: [
-            {answer: "El autor del libro", isCorrect: false},
-            {answer: "El personaje secundario", isCorrect: false},
-            {answer: "El personaje principal de la historia", isCorrect: true},
-            {answer: "El narrador de la historia", isCorrect: false}
+            { answer: "Pardo, Panda y Polar", isCorrect: true },
+            { answer: "Rocky, Spike y Bruno", isCorrect: false },
+            { answer: "Leo, Max y Oscar", isCorrect: false },
+            { answer: "Beto, Lucho y Rocco", isCorrect: false }
         ],
         block: 3
     },
     {
         id: "15",
-        question: "¿A qué género literario pertenece 'Drácula' de Bram Stoker?",
+        question: "¿Cómo se llama el personaje amarillo que vive en una piña en el fondo del mar?",
         answers: [
-            {answer: "Ciencia ficción", isCorrect: false},
-            {answer: "Fantasía", isCorrect: false},
-            {answer: "Terror", isCorrect: true},
-            {answer: "Romance", isCorrect: false}
+            { answer: "Bob Esponja", isCorrect: true },
+            { answer: "Patricio", isCorrect: false },
+            { answer: "Calamardo", isCorrect: false },
+            { answer: "Don Cangrejo", isCorrect: false }
         ],
         block: 3
     },
     {
         id: "16",
-        question: "¿En cuántas partes se divide 'La Divina Comedia' y cómo se llaman?",
+        question: "¿Cuál es el nombre del perro que siempre acompaña a Mickey Mouse?",
         answers: [
-            {answer: "Dos partes: Infierno y Paraíso", isCorrect: false},
-            {answer: "Tres partes: Infierno, Purgatorio y Paraíso", isCorrect: true},
-            {answer: "Cuatro partes: Infierno, Purgatorio, Paraíso y Limbo", isCorrect: false},
-            {answer: "Una parte: Infierno", isCorrect: false}
+            { answer: "Pluto", isCorrect: true },
+            { answer: "Goofy", isCorrect: false },
+            { answer: "Donald", isCorrect: false },
+            { answer: "Clarabelle", isCorrect: false }
         ],
-        block: 3
+        block: 4
     },
     {
         id: "17",
-        question: "¿Quién es 'El Chacho' a quien se refiere Domingo Sarmiento en su libro?",
+        question: "En 'Dragon Ball Z', ¿cómo se llama el guerrero que se transforma en Super Saiyajin por primera vez?",
         answers: [
-            {answer: "Un caudillo argentino llamado Ángel Vicente Peñaloza", isCorrect: true},
-            {answer: "Un famoso gaucho de la literatura argentina", isCorrect: false},
-            {answer: "Un personaje ficticio de las pampas argentinas", isCorrect: false},
-            {answer: "Un presidente argentino", isCorrect: false}
+            { answer: "Goku", isCorrect: true },
+            { answer: "Vegeta", isCorrect: false },
+            { answer: "Trunks", isCorrect: false },
+            { answer: "Gohan", isCorrect: false }
         ],
-        block: 3
+        block: 4
     },
     {
         id: "18",
-        question: "¿Qué busca el Espantapájaros en 'El Mago de Oz'?",
+        question: "¿Quién es el mejor amigo de Bart Simpson?",
         answers: [
-            {answer: "Un corazón", isCorrect: false},
-            {answer: "Un cerebro", isCorrect: true},
-            {answer: "Valor", isCorrect: false},
-            {answer: "Su hogar", isCorrect: false}
+            { answer: "Milhouse", isCorrect: true },
+            { answer: "Nelson", isCorrect: false },
+            { answer: "Ralph", isCorrect: false },
+            { answer: "Martin", isCorrect: false }
         ],
-        block: 3
+        block: 4
+    },
+    {
+        id: "19",
+        question: "¿Cuál es el deporte más popular en Argentina?",
+        answers: [
+            { answer: "Fútbol", isCorrect: true },
+            { answer: "Rugby", isCorrect: false },
+            { answer: "Hockey", isCorrect: false },
+            { answer: "Tenis", isCorrect: false }
+        ],
+        block: 4
+    },
+    {
+        id: "20",
+        question: "¿Cuál es la capital de Argentina?",
+        answers: [
+            { answer: "Buenos Aires", isCorrect: true },
+            { answer: "Córdoba", isCorrect: false },
+            { answer: "Rosario", isCorrect: false },
+            { answer: "Mendoza", isCorrect: false }
+        ],
+        block: 4
+    },
+    {
+        id: "21",
+        question: "¿Qué instrumento musical es típico del tango argentino?",
+        answers: [
+            { answer: "Bandoneón", isCorrect: true },
+            { answer: "Guitarra", isCorrect: false },
+            { answer: "Piano", isCorrect: false },
+            { answer: "Violín", isCorrect: false }
+        ],
+        block: 5
+    },
+    {
+        id: "22",
+        question: "¿Cómo se llama el gato azul que siempre persigue a un ratón en una popular serie animada?",
+        answers: [
+            { answer: "Tom", isCorrect: true },
+            { answer: "Garfield", isCorrect: false },
+            { answer: "Silvestre", isCorrect: false },
+            { answer: "Félix", isCorrect: false }
+        ],
+        block: 5
+    },
+    {
+        id: "23",
+        question: "¿Cuál es el nombre de la superheroína que usa un lazo dorado y un avión invisible?",
+        answers: [
+            { answer: "Mujer Maravilla", isCorrect: true },
+            { answer: "Batgirl", isCorrect: false },
+            { answer: "Supergirl", isCorrect: false },
+            { answer: "Capitana Marvel", isCorrect: false }
+        ],
+        block: 5
+    },
+    {
+        id: "24",
+        question: "¿Qué animal es Scooby-Doo?",
+        answers: [
+            { answer: "Perro", isCorrect: true },
+            { answer: "Gato", isCorrect: false },
+            { answer: "Ratón", isCorrect: false },
+            { answer: "Conejo", isCorrect: false }
+        ],
+        block: 5
+    },
+    {
+        id: "25",
+        question: "¿En qué serie animada aparecen las gemelas Patty y Selma?",
+        answers: [
+            { answer: "Los Simpsons", isCorrect: true },
+            { answer: "Futurama", isCorrect: false },
+            { answer: "South Park", isCorrect: false },
+            { answer: "Padre de familia", isCorrect: false }
+        ],
+        block: 5
+    },
+    {
+        id: "26",
+        question: "¿Cómo se llama el niño que tiene un laboratorio secreto en su casa y una hermana que siempre lo mete en problemas?",
+        answers: [
+            { answer: "Dexter", isCorrect: true },
+            { answer: "Jimmy Neutron", isCorrect: false },
+            { answer: "Phineas", isCorrect: false },
+            { answer: "Timmy Turner", isCorrect: false }
+        ],
+        block: 6
+    },
+    {
+        id: "27",
+        question: "¿Qué famoso futbolista argentino es conocido por llevar el número 10 y por su apodo 'La Pulga'?",
+        answers: [
+            { answer: "Lionel Messi", isCorrect: true },
+            { answer: "Diego Maradona", isCorrect: false },
+            { answer: "Gabriel Batistuta", isCorrect: false },
+            { answer: "Sergio Agüero", isCorrect: false }
+        ],
+        block: 6
+    },
+    {
+        id: "28",
+        question: "¿Cuál es la montaña más alta de Argentina y de toda América?",
+        answers: [
+            { answer: "Aconcagua", isCorrect: true },
+            { answer: "Fitz Roy", isCorrect: false },
+            { answer: "Tupungato", isCorrect: false },
+            { answer: "Lanín", isCorrect: false }
+        ],
+        block: 6
+    },
+    {
+        id: "29",
+        question: "¿Qué estación del año sigue después del invierno?",
+        answers: [
+            { answer: "Primavera", isCorrect: true },
+            { answer: "Verano", isCorrect: false },
+            { answer: "Otoño", isCorrect: false },
+            { answer: "Invierno", isCorrect: false }
+        ],
+        block: 6
+    },
+    {
+        id: "30",
+        question: "¿Qué animal es conocido como el rey de la selva?",
+        answers: [
+            { answer: "León", isCorrect: true },
+            { answer: "Tigre", isCorrect: false },
+            { answer: "Elefante", isCorrect: false },
+            { answer: "Pantera", isCorrect: false }
+        ],
+        block: 6
     }
 ];
 
