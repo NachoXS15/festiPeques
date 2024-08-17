@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import qa from '../../assets/bgs/qaImg.webp'
+import { ArrowBack } from '../../components/ui/svgs'
 export default function QARules() {
   return (
-    <div className='w-full h-screen bg-center bg-cover flex flex-col justify-between items-start pl-20 py-20' style={{fontFamily: 'gambado-sans',backgroundImage: `url(${qa})`}}>
+    <div className='w-full h-screen relative bg-center bg-cover flex flex-col justify-between items-start pl-20 py-20' style={{fontFamily: 'gambado-sans',backgroundImage: `url(${qa})`}}>
+      <NavLink to="/" className="absolute right-28"><ArrowBack /></NavLink>
       <h1 className='text-8xl font-bold text-cyan'>Mentes Brillantes</h1>
       <div>
         <h3 className='text-4xl text-lightorange'>Objetivo del juego:</h3>
