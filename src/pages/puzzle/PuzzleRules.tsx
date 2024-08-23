@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import puzzle from '../../assets/bgs/puzzlemaniaImg.webp'
+import puzzle from '../../assets/bgs/puzzleImg.webp'
 export default function MemoryRules() {
   return (
     <div className='w-full h-screen bg-center bg-cover flex flex-col justify-between items-start pl-20 py-20' style={{fontFamily: 'gambado-sans',backgroundImage: `url(${puzzle})`}}>
