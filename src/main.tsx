@@ -8,7 +8,6 @@ import MemoryPlay from './pages/memory/MemoryPlay'
 import QARules from './pages/qa/QARules'
 import QAPlay from './pages/qa/QAPlay'
 import PuzzleRules from './pages/puzzle/PuzzleRules'
-import PuzzlePlay from './pages/puzzle/PuzzlePlay'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
   {
     path: '/puzzlegame-rules',
     element: <PuzzleRules />
-  },
-  {
-    path: '/puzzlegame-play',
-    element: <PuzzlePlay />
   },
 ])
 
