@@ -14,9 +14,9 @@ export default function App() {
         <NavLink to="/qagame-rules" className="active:scale-105 transition w-[35%] relative rounded-md bg-cover" style={{ fontFamily: "gambado-sans", }}>
           <img src={qaIndex} alt="" />
         </NavLink >
-        <NavLink to="puzzlegame-rules" className="active:scale-105 transition w-[35%] relative rounded-md bg-cover" style={{ fontFamily: "gambado-sans", }}>
+        {/* <NavLink to="puzzlegame-rules" className="active:scale-105 transition w-[35%] relative rounded-md bg-cover" style={{ fontFamily: "gambado-sans", }}>
           <img src={puzzleIndex} alt="" />
-        </NavLink>
+        </NavLink> */}
       </div>
     </>
   )
