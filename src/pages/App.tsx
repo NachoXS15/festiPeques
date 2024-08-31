@@ -1,7 +1,6 @@
 import Header from "../components/Header";
 import memoryIndex from '../assets/init/memoryIndex.webp'
 import qaIndex from '../assets/init/qaIndex.webp'
-import puzzleIndex from '../assets/init/puzzleIndex.webp'
 import { NavLink } from "react-router-dom";
 export default function App() {
   return (
